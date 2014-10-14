@@ -57,7 +57,7 @@ public class SignUpController {
 
 		validateMore(form, bindingResult);
 
-		if (!bindingResult.hasErrors()) {
+//		if (!bindingResult.hasErrors()) {
 			User user = new User();
 			user.setActivationDate(null);
 			user.setEmailAddress(form.getEmailAddress());
@@ -70,15 +70,16 @@ public class SignUpController {
 
 			String activationKey = createActivationKey(user);
 
-			if (isAccountAutoEnabled) {
+//			if (isAccountAutoEnabled) {
 				sendActivationMail(activationKey, user);
-			}
+//			}
 
 			return "redirect:/signup/thanks";
-		}
-
-		populateEditForm(uiModel, form);
-		return "signup/form";
+//		}
+//		else {
+//		populateEditForm(uiModel, form);
+//		return "signup/form";
+//		}
 	}
 
 	private void validateMore(SignUpForm form, BindingResult bindingResult) {

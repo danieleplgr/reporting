@@ -34,3 +34,6 @@ typicalsecurity setup --entityPackage ~.domain.security --controllerPackage ~.we
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-14 09:27:16
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-10-14 09:36:31
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-14 11:36:01
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-14 12:55:29
+jpa setup --database MYSQL --provider HIBERNATE 
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-10-14 17:51:11

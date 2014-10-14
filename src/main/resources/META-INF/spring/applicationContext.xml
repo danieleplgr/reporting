@@ -58,55 +58,55 @@
         <property name="timeBetweenEvictionRunsMillis" value="1800000"/>
         <property name="numTestsPerEvictionRun" value="3"/>
         <property name="minEvictableIdleTimeMillis" value="1800000"/>
+        <property name="validationQuery" value="SELECT 1"/>
     </bean>
     <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
     <tx:annotation-driven mode="aspectj" transaction-manager="transactionManager"/>
-    <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
-        <property name="persistenceUnitName" value="persistenceUnit"/>
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
     <bean class="org.springframework.mail.javamail.JavaMailSenderImpl" id="mailSender">
         <property name="host" value="${email.host}"/>
         <property name="protocol" value="${email.protocol}"/>
         <property name="username" value="${email.username}"/>
         <property name="password" value="${email.password}"/>
         <!--You need this if you use GMail-->
-<property name="javaMailProperties">
+        <property name="javaMailProperties">
             <props>
                 <prop key="mail.smtp.auth">true</prop>
                 <prop key="mail.smtp.starttls.enable">true</prop>
             </props>
         </property>
     </bean>
-    
-<bean class="org.springframework.mail.SimpleMailMessage" id="accountActivationMailTemplate">
+    <bean class="org.springframework.mail.SimpleMailMessage" id="accountActivationMailTemplate">
         <property name="from" value="${email.from}"/>
-    <property name="subject" value="Account Activation"/>
+        <property name="subject" value="Account Activation"/>
         <property name="text">
             <value><![CDATA[Hi {{FIRST_NAME}} {{LAST_NAME}}!
 
 You had registered with us. To activate your account, please click on the following URL:
 
-	http://localhost:8080/repo/signup?e={{EMAIL_ADDRESS}}&k={{ACTIVATION_KEY}}
+	http://localhost:8080/reporting2/signup?e={{EMAIL_ADDRESS}}&k={{ACTIVATION_KEY}}
 
 Thanks]]></value>
         </property>
     </bean>
     <bean class="org.springframework.mail.SimpleMailMessage" id="accountRecoveryMailTemplate">
         <property name="from" value="${email.from}"/>
-    <property name="subject" value="Account Recovery"/>
+        <property name="subject" value="Account Recovery"/>
         <property name="text">
             <value><![CDATA[Hi {{FIRST_NAME}} {{LAST_NAME}}!
 
 You had requested account reset. To reset your account, please click on the following URL:
 
-	http://localhost:8080/repo/forgot/set?k={{KEY}}
+	http://localhost:8080/reporting2/forgot/set?k={{KEY}}
 
 	Note: This link is valid only for 2 x 24 hours.
 
 Thanks]]></value>
         </property>
+    </bean>
+    <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
+        <property name="persistenceUnitName" value="persistenceUnit"/>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 </beans>
