@@ -33,3 +33,4 @@ typicalsecurity setup --entityPackage ~.domain.security --controllerPackage ~.we
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-10-13 23:38:56
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-14 09:27:16
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-10-14 09:36:31
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-14 11:36:01
