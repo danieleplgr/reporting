@@ -1,0 +1,35 @@
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-10-13 22:45:17
+project --topLevelPackage com.repo --projectName reporting2 --java 6 --packaging WAR
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-10-13 22:45:56
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-10-13 22:50:04
+jpa setup --provider ECLIPSELINK --database HYPERSONIC_IN_MEMORY
+web mvc setup
+hint
+osgi start --url https://michsan-rooaddon-typicalsecurity.googlecode.com/files/michsan.rooaddon.typicalsecurity-1.2.3-SNAPSHOT.jar
+osgi log 
+entity jpa --class ~.domain.security.User --testAutomatically --permitReservedWords --table users
+field string --fieldName firstName --sizeMin 1 --notNull --column first_name
+field string --fieldName lastName --sizeMin 1 --notNull --column last_name
+field string --fieldName emailAddress --notNull --unique --column email_address
+field string --fieldName password --sizeMin 1 --notNull --column password
+field date --fieldName activationDate --type java.util.Date --column activation_date
+field boolean --fieldName enabled --column enabled
+field boolean --fieldName locked --column locked
+entity jpa --class ~.domain.security.Role --testAutomatically --permitReservedWords --table roles
+field string --fieldName name --sizeMin 1 --notNull --unique --regexp ^ROLE_[A-Z]* --column name
+field string --fieldName description --sizeMax 200 --notNull --column description
+entity jpa --class ~.domain.security.UserRole --testAutomatically --table users_roles
+field reference --fieldName user --type ~.domain.security.User --notNull --joinColumnName user_id --permitReservedWords
+field reference --fieldName role --type ~.domain.security.Role --notNull --joinColumnName role_id --permitReservedWords
+finder add findUsersByEmailAddress --class ~.domain.security.User
+finder add findUserRolesByUser --class ~.domain.security.UserRole
+web mvc scaffold --class ~.web.security.UserController --backingType ~.domain.security.User --path /security/users
+web mvc scaffold --class ~.web.security.RoleController --backingType ~.domain.security.Role --path /security/roles
+web mvc scaffold --class ~.web.security.UserRoleController --backingType ~.domain.security.UserRole --path /security/assignrole
+security setup
+email sender setup --hostServer smtp.gmail.com --protocol SMTP --username your-email@gmail.com --password your-email-password
+email template setup --from your-email@gmail.com
+typicalsecurity setup --entityPackage ~.domain.security --controllerPackage ~.web.security
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-10-13 23:38:56
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-14 09:27:16
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-10-14 09:36:31

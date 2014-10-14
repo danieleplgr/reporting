@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_user" z="uoTSf/uIZ821ZppidzS9aO776yk=">
+            <menu:item id="i_user_new" messageCode="global_menu_new" url="/security/users?form" z="c85KUEJlx3IraUTnttCLgXcDCQ0="/>
+            <menu:item id="i_user_list" messageCode="global_menu_list" url="/security/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KgqH4ORr9lFHMlXLUaE+G8A2Evc="/>
+        </menu:category>
+        <menu:category id="c_role" z="LPygIx2EuEArCzqsfpQQev0lHyc=">
+            <menu:item id="i_role_new" messageCode="global_menu_new" url="/security/roles?form" z="dgsLLIun+bcm3IZkzkc6kSms+Uk="/>
+            <menu:item id="i_role_list" messageCode="global_menu_list" url="/security/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="liweb2IoVTDM/V4zpp61Ic8z9D8="/>
+        </menu:category>
+        <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
+            <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/security/assignrole?form" z="y9WtUvel50F2A4VOVOeY7PVEYhk="/>
+            <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/security/assignrole?page=1&amp;size=${empty param.size ? 10 : param.size}" z="P6AEL8JMAbKhOIlyw65OJwVYiww="/>
+        </menu:category>
+    </menu:menu>
+</div>

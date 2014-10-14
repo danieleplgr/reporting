@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_repo_domain_security_User" object="${user}" path="/security/users" z="oQDK1I8tS2WxlMwhKBzSC630ro8=">
+        <field:display field="firstName" id="s_com_repo_domain_security_User_firstName" object="${user}" z="jQ+5FAT418menV4gxxvGyY17Odk="/>
+        <field:display field="lastName" id="s_com_repo_domain_security_User_lastName" object="${user}" z="7rdhrdfectZiPjp7xZmw6bhZ8cw="/>
+        <field:display field="emailAddress" id="s_com_repo_domain_security_User_emailAddress" object="${user}" z="uAkp35vHoBrc3hUSq7a8EcqGjPI="/>
+        <field:display field="password" id="s_com_repo_domain_security_User_password" object="${user}" render="false" z="user-managed"/>
+        <field:display date="true" dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="s_com_repo_domain_security_User_activationDate" object="${user}" z="pGHfbpwmQUAxRoTVG6md/Tie/Mo="/>
+        <field:display field="enabled" id="s_com_repo_domain_security_User_enabled" object="${user}" z="Rfcu8cxGkQ/mnAQX1iqzld98xMY="/>
+        <field:display field="locked" id="s_com_repo_domain_security_User_locked" object="${user}" z="mB1CJRLrO9iSU5NwID73OsMAJ5k="/>
+    </page:show>
+</div>

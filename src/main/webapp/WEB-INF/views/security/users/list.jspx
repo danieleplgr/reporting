@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_repo_domain_security_User" items="${users}" z="gInDTmNfNBoowdulGDI95l3olqA=">
+        <table:table data="${users}" id="l_com_repo_domain_security_User" path="/security/users" z="I2y3rhcclimN9ZzbAaa5MTvabw0=">
+            <table:column id="c_com_repo_domain_security_User_firstName" property="firstName" z="htpA1irXO6U/IMjeAYFPtxTVqv4="/>
+            <table:column id="c_com_repo_domain_security_User_lastName" property="lastName" z="gr8HYXZfA6tRFWDqTnNyxKJca+4="/>
+            <table:column id="c_com_repo_domain_security_User_emailAddress" property="emailAddress" z="5lSBv0QsRxivMMU1awxEAWA/zVY="/>
+            <table:column id="c_com_repo_domain_security_User_password" property="password" render="false" z="user-managed"/>
+            <table:column date="true" dateTimePattern="${user_activationdate_date_format}" id="c_com_repo_domain_security_User_activationDate" property="activationDate" z="mkXsznJe5AbWzRX52UOfTc3W5Xc="/>
+            <table:column id="c_com_repo_domain_security_User_enabled" property="enabled" z="Q9VAMxjhFhezAxKFoM3AEh5XnCE="/>
+        </table:table>
+    </page:list>
+</div>
