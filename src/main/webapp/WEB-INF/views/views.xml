@@ -23,9 +23,5 @@
 
 	<definition extends="public" name="login">
 		<put-attribute name="body" value="/WEB-INF/views/login.jspx" />
-	</definition>
-
-	<definition extends="admin" name="index">
-		<put-attribute name="body" value="/WEB-INF/views/admin/index.jspx" />
-	</definition>
+	</definition> 
 </tiles-definitions>
