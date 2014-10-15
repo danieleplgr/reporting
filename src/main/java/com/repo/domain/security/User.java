@@ -1,15 +1,11 @@
 package com.repo.domain.security;
-
 import com.repo.domain.security.attribute.CreateAttributes;
-
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -49,7 +45,12 @@ public class User {
     @Column(name = "enabled")
     private Boolean enabled;
 
-   	@Column(name = "locked")
+    @Column(name = "locked")
     private Boolean locked;
 
+    /**
+     */
+    @Size(max = 15)
+    @Column(unique = true)
+    private String mobilePhone;
 }

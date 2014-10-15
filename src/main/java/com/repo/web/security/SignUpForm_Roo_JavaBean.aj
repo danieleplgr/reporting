@@ -4,7 +4,6 @@
 package com.repo.web.security;
 
 import com.repo.web.security.SignUpForm;
-import net.tanesha.recaptcha.ReCaptcha;
 
 privileged aspect SignUpForm_Roo_JavaBean {
     
@@ -48,36 +47,12 @@ privileged aspect SignUpForm_Roo_JavaBean {
         this.retypePassword = retypePassword;
     }
     
-    public String SignUpForm.getRecaptchaChallenge() {
-        return this.recaptchaChallenge;
+    public String SignUpForm.getMobilePhone() {
+        return this.mobilePhone;
     }
     
-    public void SignUpForm.setRecaptchaChallenge(String recaptchaChallenge) {
-        this.recaptchaChallenge = recaptchaChallenge;
-    }
-    
-    public String SignUpForm.getRecaptchaResponse() {
-        return this.recaptchaResponse;
-    }
-    
-    public void SignUpForm.setRecaptchaResponse(String recaptchaResponse) {
-        this.recaptchaResponse = recaptchaResponse;
-    }
-    
-    public ReCaptcha SignUpForm.getReCatcpha() {
-        return this.reCatcpha;
-    }
-    
-    public void SignUpForm.setReCatcpha(ReCaptcha reCatcpha) {
-        this.reCatcpha = reCatcpha;
-    }
-    
-    public String SignUpForm.getReCaptchaErrorMessage() {
-        return this.reCaptchaErrorMessage;
-    }
-    
-    public void SignUpForm.setReCaptchaErrorMessage(String reCaptchaErrorMessage) {
-        this.reCaptchaErrorMessage = reCaptchaErrorMessage;
+    public void SignUpForm.setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
     }
     
 }

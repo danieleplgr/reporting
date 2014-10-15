@@ -1,12 +1,11 @@
 package com.repo.web.security;
 
 import com.repo.domain.security.User;
-
-import java.util.Date;
-
+import com.repo.domain.security.UserRole;
+import com.repo.domain.security.Role;
+import java.util.Date; 
 import javax.persistence.TypedQuery;
-import javax.validation.Valid;
-
+import javax.validation.Valid; 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -59,6 +58,7 @@ public class SignUpController {
 
 //		if (!bindingResult.hasErrors()) {
 			User user = new User();
+			user.setMobilePhone(form.getMobilePhone());
 			user.setActivationDate(null);
 			user.setEmailAddress(form.getEmailAddress());
 			user.setFirstName(form.getFirstName());
@@ -68,6 +68,16 @@ public class SignUpController {
 			user.setLocked(false);
 			user.persist();
 
+			
+			UserRole userRole = new UserRole();
+//			userRole.p
+			userRole.setUser(user);
+			Role role = new Role();
+			TypedQuery<Role> query = role.findRolesByNameEquals("ROLE_USER");
+			role = query.getSingleResult();
+			userRole.setRole(role);
+			userRole.persist();
+			
 			String activationKey = createActivationKey(user);
 
 //			if (isAccountAutoEnabled) {
@@ -140,7 +150,7 @@ public class SignUpController {
 
 	private void populateEditForm(Model uiModel, SignUpForm form) {
 		uiModel.addAttribute("form", form);
-		uiModel.addAttribute("captcha_form", form.getReCaptchaHtml());
+//		uiModel.addAttribute("captcha_form", form.getReCaptchaHtml());
 	}
 
 	/* Accessors ************************************************************ */

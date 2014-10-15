@@ -9,33 +9,10 @@ import javax.persistence.TypedQuery;
 
 privileged aspect User_Roo_Finder {
     
-    public static Long User.countFindUsersByEmailAddress(String emailAddress) {
-        if (emailAddress == null || emailAddress.length() == 0) throw new IllegalArgumentException("The emailAddress argument is required");
-        EntityManager em = User.entityManager();
-        TypedQuery q = em.createQuery("SELECT COUNT(o) FROM User AS o WHERE o.emailAddress = :emailAddress", Long.class);
-        q.setParameter("emailAddress", emailAddress);
-        return ((Long) q.getSingleResult());
-    }
-    
     public static TypedQuery<User> User.findUsersByEmailAddress(String emailAddress) {
         if (emailAddress == null || emailAddress.length() == 0) throw new IllegalArgumentException("The emailAddress argument is required");
         EntityManager em = User.entityManager();
         TypedQuery<User> q = em.createQuery("SELECT o FROM User AS o WHERE o.emailAddress = :emailAddress", User.class);
-        q.setParameter("emailAddress", emailAddress);
-        return q;
-    }
-    
-    public static TypedQuery<User> User.findUsersByEmailAddress(String emailAddress, String sortFieldName, String sortOrder) {
-        if (emailAddress == null || emailAddress.length() == 0) throw new IllegalArgumentException("The emailAddress argument is required");
-        EntityManager em = User.entityManager();
-        String jpaQuery = "SELECT o FROM User AS o WHERE o.emailAddress = :emailAddress";
-        if (fieldNames4OrderClauseFilter.contains(sortFieldName)) {
-            jpaQuery = jpaQuery + " ORDER BY " + sortFieldName;
-            if ("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
-                jpaQuery = jpaQuery + " " + sortOrder;
-            }
-        }
-        TypedQuery<User> q = em.createQuery(jpaQuery, User.class);
         q.setParameter("emailAddress", emailAddress);
         return q;
     }

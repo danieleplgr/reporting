@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(table = "roles")
+@RooJpaActiveRecord(table = "roles", finders = { "findRolesByNameEquals" })
 public class Role {
 
     /**

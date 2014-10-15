@@ -27,8 +27,7 @@
 				required="true" type="password" z="?" />
 			<field:input field="retypePassword" id="c_retype_password"
 				type="password" z="?" />
-        	${captcha_form}
-        	
+			<field:input field="mobilePhone" id="c_mobilePhone" z="?" />
         	<div class="submit">
 				<script type="text/javascript">
 					Spring.addDecoration(new Spring.ValidateAllDecoration({

@@ -64,4 +64,12 @@ privileged aspect User_Roo_JavaBean {
         this.locked = locked;
     }
     
+    public String User.getMobilePhone() {
+        return this.mobilePhone;
+    }
+    
+    public void User.setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+    }
+    
 }

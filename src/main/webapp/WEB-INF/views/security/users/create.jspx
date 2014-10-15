@@ -10,6 +10,7 @@
         <field:datetime dateTimePattern="${user_activationdate_date_format}" field="activationDate" id="c_com_repo_domain_security_User_activationDate" render="false" z="user-managed"/>
         <field:checkbox field="enabled" id="c_com_repo_domain_security_User_enabled" z="ri1usAa+K02XUI43akP129ge+eM="/>
         <field:checkbox field="locked" id="c_com_repo_domain_security_User_locked" z="wD3vVIfTO/TSDekQePfkSqs+SmQ="/>
+        <field:input field="mobilePhone" id="c_com_repo_domain_security_User_mobilePhone" max="15" z="M8T55IvZomtPNIvLTbCSFm5t33Q="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_repo_domain_security_User" render="${not empty dependencies}" z="UOEQd9XF37l0CjZRa3m48HIwVvM="/>
 </div>

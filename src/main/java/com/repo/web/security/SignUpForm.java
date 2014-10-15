@@ -36,44 +36,47 @@ public class SignUpForm {
 	private String password;
 
 	private String retypePassword;
-
-	private String recaptchaChallenge;
-	private String recaptchaResponse;
-
-	private ReCaptcha reCatcpha;
-	private String reCaptchaErrorMessage;
+	
+	private String mobilePhone;
+	
+//
+//	private String recaptchaChallenge;
+//	private String recaptchaResponse;
+//
+//	private ReCaptcha reCatcpha;
+//	private String reCaptchaErrorMessage;
 
 
 	public SignUpForm() {
-		reCatcpha = ReCaptchaFactory.newReCaptcha(
-				"6LdfmL8SAAAAAFnT0l3UNPOV8mkpHIown-ysSR1g",
-				"6LdfmL8SAAAAAHKPqUQV5SxrRX9Id6a8cQo-mgpE", false);
+//		reCatcpha = ReCaptchaFactory.newReCaptcha(
+//				"6LdfmL8SAAAAAFnT0l3UNPOV8mkpHIown-ysSR1g",
+//				"6LdfmL8SAAAAAHKPqUQV5SxrRX9Id6a8cQo-mgpE", false);
 	}
 
 
-	public void setRecaptcha_challenge_field(String recaptchaChallenge) {
-		this.recaptchaChallenge = recaptchaChallenge;
-	}
+//	public void setRecaptcha_challenge_field(String recaptchaChallenge) {
+//		this.recaptchaChallenge = recaptchaChallenge;
+//	}
+//
+//	public void setRecaptcha_response_field(String recaptchaResponse) {
+//		this.recaptchaResponse = recaptchaResponse;
+//	}
+//
+//	public String getReCaptchaHtml() {
+//		return reCatcpha.createRecaptchaHtml(reCaptchaErrorMessage, null);
+//	}
 
-	public void setRecaptcha_response_field(String recaptchaResponse) {
-		this.recaptchaResponse = recaptchaResponse;
-	}
-
-	public String getReCaptchaHtml() {
-		return reCatcpha.createRecaptchaHtml(reCaptchaErrorMessage, null);
-	}
-
-	@AssertTrue(message = "Wrong captcha")
-	public boolean isValidCaptcha() {
-		ReCaptchaResponse reCaptchaResponse = reCatcpha.checkAnswer(
-				"localhost", getRecaptchaChallenge(), getRecaptchaResponse());
-		boolean result = reCaptchaResponse.isValid();
-
-		if (!result) {
-			reCaptchaErrorMessage = "Wrong captcha answer";
-		}
-
-		return result;
-	}
+//	@AssertTrue(message = "Wrong captcha")
+//	public boolean isValidCaptcha() {
+//		ReCaptchaResponse reCaptchaResponse = reCatcpha.checkAnswer(
+//				"localhost", getRecaptchaChallenge(), getRecaptchaResponse());
+//		boolean result = reCaptchaResponse.isValid();
+//
+//		if (!result) {
+//			reCaptchaErrorMessage = "Wrong captcha answer";
+//		}
+//
+//		return result;
+//	}
 
 }
