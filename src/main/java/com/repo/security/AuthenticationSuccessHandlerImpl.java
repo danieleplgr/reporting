@@ -48,21 +48,25 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
 		boolean isAdmin = false;
 		Collection<? extends GrantedAuthority> authorities = authentication
 				.getAuthorities();
+		String roleString = null;
 		for (GrantedAuthority grantedAuthority : authorities) {
-			if (grantedAuthority.getAuthority().equals("ROLE_USER")) {
+			roleString =  grantedAuthority.getAuthority();
+			if (roleString.equals("ROLE_USER")) {
 				isUser = true;
+				
 				break;
-			} else if (grantedAuthority.getAuthority().equals("ROLE_ADMIN")) {
+			} else if (roleString.equals("ROLE_ADMIN")) {
 				isAdmin = true;
 				break;
 			}
 		}
 
 		if (isUser) {
-			return "/userhome";
+			return "/user/homeuser";
 		} else if (isAdmin) {
 			return "/admin/index";
 		} else {
+			logger.warn("Found unexepcted role on Success Login: '" + roleString + "'");
 			// throw new IllegalStateException();
 			return "/login";
 		}

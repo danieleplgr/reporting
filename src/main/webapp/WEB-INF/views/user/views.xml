@@ -3,8 +3,8 @@
 <tiles-definitions>
 
 	<!-- Userlogged Tiles -->
-	<definition extends="default" name="homeuser">
-		<put-attribute name="body" value="/WEB-INF/views/admin/index.jspx" />
+	<definition extends="default" name="user/homeuser">
+		<put-attribute name="body" value="/WEB-INF/views/user/homeuser.jspx" />
 	</definition>
 
 </tiles-definitions>

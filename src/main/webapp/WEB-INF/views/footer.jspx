@@ -17,14 +17,25 @@
         <spring:message code="security_logout"/>
       </a>
     </span>
-  <c:out value=" | "/>
-        <span>
-            <spring:url value="/passwd" var="passwd"/>
-            <a href="${passwd}">
-                <spring:message code="change_password"/>
-            </a>
-        </span>
-    </c:if>
+  	<c:out value=" | "/>
+    <span>
+        <spring:url value="/passwd" var="passwd"/>
+        <a href="${passwd}">
+            <spring:message code="change_password"/>
+        </a>
+    </span>
+  </c:if>
+  
+  <c:if test="${pageContext['request'].userPrincipal == null}">
+    <c:out value=" | "/>
+    <span>
+      <spring:url value="/login" var="login"/>
+      <a href="${login}">
+        <spring:message code="security_login"/>
+      </a>
+    </span>
+  </c:if>
+  
 
   <span id="language">
     <c:out value=" | "/>
