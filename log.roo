@@ -40,6 +40,7 @@ jpa setup --database MYSQL --provider HIBERNATE
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-15 15:52:29
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-10-15 15:54:25
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-15 16:32:18
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-10-15 17:10:20
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-10-15 21:17:42
 // [failed] entity jpa --class ~.domain.security.User 
 field string --fieldName mobilePhone --sizeMax 15
