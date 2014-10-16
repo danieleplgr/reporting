@@ -13,4 +13,10 @@
 <definition extends="default" name="security/users/update">
         <put-attribute name="body" value="/WEB-INF/views/security/users/update.jspx"/>
     </definition>
+<definition extends="default" name="security/users/findUsersByActivationDateBetweenAndEmailAddressLikeAndEnabledNotAndFirstNameLikeAndLastNameLikeAndMobilePhoneLike">
+        <put-attribute name="body" value="/WEB-INF/views/security/users/findUsersByActivationDateBetweenAndEmailAddressLikeAndEnabledNotAndFirstNameLikeAndLastNameLikeAndMobilePhoneLike.jspx"/>
+    </definition>
+<definition extends="default" name="security/users/findUsersByEmailAddress">
+        <put-attribute name="body" value="/WEB-INF/views/security/users/findUsersByEmailAddress.jspx"/>
+    </definition>
 </tiles-definitions>

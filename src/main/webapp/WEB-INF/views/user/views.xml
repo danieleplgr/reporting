@@ -3,8 +3,9 @@
 <tiles-definitions>
 
 	<!-- Userlogged Tiles -->
-	<definition extends="default" name="user/homeuser">
+	<definition extends="private" name="user/homeuser">
 		<put-attribute name="body" value="/WEB-INF/views/user/homeuser.jspx" />
 	</definition>
+	 
 
 </tiles-definitions>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/> 
+    <menu:menu id="_menu" z="user-managed" >
+        <menu:category id="c_reporting" z="user-managed">
+            <menu:item id="i_reporting_new" messageCode="global_open_reporting" url="/reportings?form" z="user-managed"/>
+            <menu:item id="i_reporting_list" messageCode="global_search_reporting" url="/reportings/search" z="user-managed"/>
+        </menu:category>
+    </menu:menu>
+</div>

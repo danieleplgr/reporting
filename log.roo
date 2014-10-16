@@ -56,3 +56,20 @@ focus --class ~.domain.security.Role
 focus --class ~.domain.security.Role
 focus --class ~.domain.security.Role
 finder add --finderName findRolesByNameEquals
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-10-16 13:42:39
+entity jpa --class ~.domain.Reporting
+field date --type java.util.Date --fieldName creationDate
+web mvc scaffold --class ~.domain.Reporting 
+// [failed] web mvc all --package com.repo.domain
+web mvc all --package com.repo.domain
+web mvc all --package com.repo.domain
+web mvc update tags 
+web mvc scaffold --class ~.web.ReportingController --backingType ~.domain.Reporting
+web mvc scaffold --class ~.web.reporting.ReportingController --backingType ~.domain.Reporting
+focus --class ~.domain.security.User 
+finder list 
+// [failed] finder list --class ~.domain.security.User --depth 5
+finder list --class ~.domain.security.User --depth 2
+finder list --class ~.domain.security.User --depth 1
+// [failed] web mvc finder add --class ~.domain.UserController --formBackingType ~.domain.security.User
+web mvc finder add --class ~.web.security.UserController --formBackingType ~.domain.security.User

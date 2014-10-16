@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByActivationDateBetweenAndEmailAddressLikeAndEnabledNotAndFirstNameLikeAndLastNameLikeAndMobilePhoneLike" id="ff_com_repo_domain_security_User" path="/security/users" z="8e1nQMY3X65D4/H4Czz4to2b0us=">
+        <field:datetime dateTimePattern="${user_activationdate_date_format}" disableFormBinding="true" field="minActivationDate" id="f_com_repo_domain_security_User_minActivationDate" required="false" z="SwD1/y2ACU9m6yvJfgphmdF/ojw="/>
+        <field:datetime dateTimePattern="${user_activationdate_date_format}" disableFormBinding="true" field="maxActivationDate" id="f_com_repo_domain_security_User_maxActivationDate" required="false" z="JApQYZQjeVvMhemy4kGBadPMk4Y="/>
+        <field:input disableFormBinding="true" field="emailAddress" id="f_com_repo_domain_security_User_emailAddress" min="1" required="false" validationMessageCode="field_invalid_email" z="PAVYTjNBRje50h67S2MZg3YX3GQ="/>
+        <field:checkbox disableFormBinding="true" field="enabled" id="f_com_repo_domain_security_User_enabled" z="it2AJPYp4ixf4ihLR9rp2mIag2M="/>
+        <field:input disableFormBinding="true" field="firstName" id="f_com_repo_domain_security_User_firstName" min="1" required="false" z="i+Hqj5sxN1DjdCiJ4j5I+vKreXY="/>
+        <field:input disableFormBinding="true" field="lastName" id="f_com_repo_domain_security_User_lastName" min="1" required="false" z="33br+oGIvYwu8WF/VZaZk8nxv3s="/>
+        <field:input disableFormBinding="true" field="mobilePhone" id="f_com_repo_domain_security_User_mobilePhone" max="15" required="false" z="1Fk7blj9KZS0cRbeu/ZULuPg3ao="/>
+    </form:find>
+</div>

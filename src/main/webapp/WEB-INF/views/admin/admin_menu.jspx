@@ -6,8 +6,8 @@
         <menu:category id="c_user" z="uoTSf/uIZ821ZppidzS9aO776yk=">
             <menu:item id="i_user_new" messageCode="global_menu_new" url="/security/users?form" z="c85KUEJlx3IraUTnttCLgXcDCQ0="/>
             <menu:item id="i_user_list" messageCode="global_menu_list" url="/security/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KgqH4ORr9lFHMlXLUaE+G8A2Evc="/>
-            <menu:item id="fi_user_activationdatebetweenandemailaddresslikeandenablednotandfirstnamelikeandlastnamelikeandmobilephonelike" messageCode="global_menu_find" url="/security/users?find=ByActivationDateBetweenAndEmailAddressLikeAndEnabledNotAndFirstNameLikeAndLastNameLikeAndMobilePhoneLike&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="RWQ2mQDS3Ip1UUdQzkef0EzO7Zk="/>
-            <menu:item id="fi_user_emailaddress" messageCode="global_menu_find" url="/security/users?find=ByEmailAddress&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="Y/4oAn8ajBxNXAqWTfU7u6unEIw="/>
+        	<menu:item id="fi_user_activationdatebetweenandemailaddresslikeandenablednotandfirstnamelikeandlastnamelikeandmobilephonelike" messageCode="global_menu_find" url="/security/users?find=ByActivationDateBetweenAndEmailAddressLikeAndEnabledNotAndFirstNameLikeAndLastNameLikeAndMobilePhoneLike&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="RWQ2mQDS3Ip1UUdQzkef0EzO7Zk="/>
+          
         </menu:category>
         <menu:category id="c_role" z="LPygIx2EuEArCzqsfpQQev0lHyc=">
             <menu:item id="i_role_new" messageCode="global_menu_new" url="/security/roles?form" z="dgsLLIun+bcm3IZkzkc6kSms+Uk="/>
@@ -16,10 +16,6 @@
         <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
             <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/security/assignrole?form" z="y9WtUvel50F2A4VOVOeY7PVEYhk="/>
             <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/security/assignrole?page=1&amp;size=${empty param.size ? 10 : param.size}" z="P6AEL8JMAbKhOIlyw65OJwVYiww="/>
-        </menu:category>
-        <menu:category id="c_reporting" z="jb5YV7fC/QrI3QEZB8BGFV8Asf0=">
-            <menu:item id="i_reporting_new" messageCode="global_menu_new" url="/reportings?form" z="NR4NqD3y+gDHqJnRphwH0VhGkSw="/>
-            <menu:item id="i_reporting_list" messageCode="global_menu_list" url="/reportings?page=1&amp;size=${empty param.size ? 10 : param.size}" z="PuenqdT3hBEoyop2KA31XCwJnfQ="/>
         </menu:category>
     </menu:menu>
 </div>

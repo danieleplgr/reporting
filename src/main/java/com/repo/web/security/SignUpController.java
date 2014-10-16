@@ -50,13 +50,11 @@ public class SignUpController {
 
 	// Tested
 	@RequestMapping(method = RequestMethod.POST)
-	public String submitSignUpForm(
-			@Valid @ModelAttribute("form") SignUpForm form,
-			BindingResult bindingResult, Model uiModel) {
+	public String submitSignUpForm( @Valid @ModelAttribute("form") SignUpForm form, BindingResult bindingResult, Model uiModel) {
 
 		validateMore(form, bindingResult);
 
-//		if (!bindingResult.hasErrors()) {
+		if (!bindingResult.hasErrors()) {
 			User user = new User();
 			user.setMobilePhone(form.getMobilePhone());
 			user.setActivationDate(null);
@@ -85,11 +83,11 @@ public class SignUpController {
 //			}
 
 			return "redirect:/signup/thanks";
-//		}
-//		else {
-//		populateEditForm(uiModel, form);
-//		return "signup/form";
-//		}
+		}
+		else {
+			populateEditForm(uiModel, form);
+			return "signup/form";
+		}
 	}
 
 	private void validateMore(SignUpForm form, BindingResult bindingResult) {
