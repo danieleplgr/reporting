@@ -73,3 +73,4 @@ finder list --class ~.domain.security.User --depth 2
 finder list --class ~.domain.security.User --depth 1
 // [failed] web mvc finder add --class ~.domain.UserController --formBackingType ~.domain.security.User
 web mvc finder add --class ~.web.security.UserController --formBackingType ~.domain.security.User
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-10-16 17:34:07
